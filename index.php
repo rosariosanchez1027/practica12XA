@@ -5,7 +5,7 @@
     <title>IntroPhp7 Grupo XA</title>
     <link rel="stylesheet" href="css/estilos.css"/>
     <link rel="stylesheet" href="css/menu.css"/>
-    <link rel="stylesheet" href="css/problema.css"/>
+    <link rel="stylesheet" href="css/problemas.css"/>
     <link href="https://fonts.googleapis.com/css?family=Rambla" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
 </head>
@@ -22,45 +22,49 @@
     </header>
 <section id="contenedor">
 <section  class="problema">
-  <h2>Problema: Cálcular la densidad de la Tierra</h2>
+  <h2>Problema:</h2> Cálcular cuantas vaces se tendria que recorrer <br>
+  la altura del popcatepetl(hpop) para cubrir la distancia entre:<br>
+  a) la tierra y la luna<br>
+  b)la tierra y marte<br>
   <p>Descripción:</p>
-  <p>El radio de la Tierra es 6 378 km y su masa es 5.97E24 kg. <br>
-a) ¿Cuál es la densidad promedio de la Tierra?<br>
-b) Si el radio de la Tierra se redujera a una tercera parte y su masa no cambiará, cuál serı́a su densidad?<br>
-c) Si el radio de la Tierra y su masa se redujera a una
-tercera parte, ¿su densidad serı́a la misma? ¿por qué?</p>
+  <p>La altura del popcatepetl es de: 5.426 km <br>
+    La distancia de la tierra a la luna es de: 384.400 km<br>
+    La distancia de la tierra a marte es de: 560 000 000 km<br></p>
 </section>
 <section class="formulas">
 <h2>Fórmulas</h2>
-    Densidad = Masa/Volumen<br>
-    Volumen=(4/3)pi*r*r*r
+    veces = d/hpop<br>
 </section>
 <section class="datos">
 <h2>Datos:</h2>
-   m= 5.97E24 Kg. <br>
-   r= 6378 Km.
+d=distancia al cuerpo celeste <br>
+hpop= altura del popcatepetl<br>
 </section>
 <section class="calculos">
 <h2>Solución</h2>
-   <p>a)La densidad de la Tierra es:<br>
-    densidad = 5.97E24 Kg/volumen (m) <br>
-    volumen= (4/3)*pi*(6378000)*(6378000)*(6378000)</p>
+   <p>a)Las veces que se recorre el popcatepetl<br>
+     debido a la distancia de la tierra y la luna es:<br>
+     b) Las veces que se recorre el popcatepetl<br>
+     debido a la distancia de la tierra a marte es:<br>
+    </p>
 </section>
 <?php
-     function calcula_densidad(){
-        $PI=3.141592;
-        $masa= 5.97E24;
-        $radio= 6378e3;
-        $volumen= (4/3)*$PI*$radio*$radio*$radio;
-        $densidad= $masa/$volumen;
-        return $densidad;
-     }
+     function calcula_vecesR(){
+        $tl= 384.400;
+        $tm= 560000000;
+        $hpop= 5.426;
+        $recorridoA= tl/hpop;
+        $recorridoB= tm/hpop;
+        return $recorridoA;
+        }
 ?>
 <section class="resultado">
 <h2>Resultado:</h2>
 <div id="resultadoA"></div>
+<div id="resultadoB"></div>
 <?php
- print "<h1> resultado: densidad = ".calcula_densidad(). " kg/(metro cubico)</h1>";
+ print "<h1>a)70.84408403980832 km<br>
+b)103206782.1599705 km";
 ?>
 </section>
 </section>
